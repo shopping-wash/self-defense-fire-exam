@@ -1,0 +1,977 @@
+{
+  "status": "preliminary-static-audit-not-final",
+  "total": 126,
+  "flagged": 118,
+  "flags": [
+    {
+      "id": 1,
+      "category": "基礎",
+      "question": "次のうち第4類危険物の引火性液体に該当しないものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "基礎",
+      "question": "静電気について誤っている記述はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "基礎",
+      "question": "火災時の煙について不適切な説明はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "基礎",
+      "question": "非常用照明装置の説明で誤っているものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "基礎",
+      "question": "防火戸の説明で誤っているものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "法令",
+      "question": "防火管理者の業務に該当しないものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "法令",
+      "question": "消防法上の応急消火義務者に通常該当しないものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "法令",
+      "question": "東京都火災予防条例上、避難経路図の掲出が義務付けられていない建物はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 9,
+      "category": "法令",
+      "question": "自衛消防活動中核要員の個人用装備として一律に義務付けられていないものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 10,
+      "category": "法令",
+      "question": "東京都震災対策条例に関する都民の備えとして不適切なものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 11,
+      "category": "実務",
+      "question": "防火対象物の自主検査について誤っているものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 12,
+      "category": "実務",
+      "question": "初期消火の安全管理で不適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 13,
+      "category": "実務",
+      "question": "避難誘導として不適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 14,
+      "category": "実務",
+      "question": "火災時の安全防護措置で不適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 15,
+      "category": "実務",
+      "question": "防災センター勤務者の対応で誤っているものはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 16,
+      "category": "実務",
+      "question": "1号屋内消火栓の発信機を押した後に表示灯が点滅した。主な理由はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 17,
+      "category": "実務",
+      "question": "自動火災報知設備作動時の行動で不適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 18,
+      "category": "実務",
+      "question": "スプリンクラー設備の維持管理で誤っているものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 20,
+      "category": "基礎",
+      "question": "静電気の発生・蓄積に関する記述のうち、適切でないものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 25,
+      "category": "法令",
+      "question": "自衛消防活動中核要員の装備に関する説明として適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor"
+      ]
+    },
+    {
+      "id": 29,
+      "category": "実務",
+      "question": "AEDによる電気ショックの要否について正しいのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor"
+      ]
+    },
+    {
+      "id": 30,
+      "category": "基礎",
+      "question": "灯油とガソリンの性状比較で適切なものはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 31,
+      "category": "基礎",
+      "question": "ガソリン蒸気が低所に滞留しやすい主な理由はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 32,
+      "category": "基礎",
+      "question": "引火点と発火点の説明で適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 33,
+      "category": "基礎",
+      "question": "粉じん爆発の危険性が高まる条件として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 34,
+      "category": "基礎",
+      "question": "一酸化炭素の危険性について適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 35,
+      "category": "基礎",
+      "question": "フラッシュオーバーについて適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 36,
+      "category": "基礎",
+      "question": "バックドラフトが発生し得る状況として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 37,
+      "category": "基礎",
+      "question": "熱の伝わり方のうち、離れた可燃物に電磁波として熱が伝わるものはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 38,
+      "category": "基礎",
+      "question": "金属製配管を介して熱が伝わる現象として主となるのはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 39,
+      "category": "基礎",
+      "question": "高温の煙が階段室を上昇する現象に最も関係するのはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 40,
+      "category": "基礎",
+      "question": "煙の拡大に関して不適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 41,
+      "category": "基礎",
+      "question": "可燃性ガスの燃焼範囲に関して適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 42,
+      "category": "基礎",
+      "question": "消火器の適応火災表示を確認する主な理由はどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 43,
+      "category": "基礎",
+      "question": "油火災に対して水を勢いよく直接放射することの危険性はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 44,
+      "category": "基礎",
+      "question": "電気設備の火災で初期消火時に特に確認すべきことはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 45,
+      "category": "基礎",
+      "question": "窒息消火が困難になり得る条件はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 46,
+      "category": "基礎",
+      "question": "可燃物の表面積と燃焼速度の関係として適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 47,
+      "category": "基礎",
+      "question": "耐火構造と防火設備の関係で適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 48,
+      "category": "基礎",
+      "question": "防火区画を貫通する配管の施工で重要な点はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 49,
+      "category": "基礎",
+      "question": "防火シャッターの降下障害につながる行為はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 50,
+      "category": "基礎",
+      "question": "避難階段の防火戸の管理で適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 51,
+      "category": "基礎",
+      "question": "防煙垂れ壁の役割として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 52,
+      "category": "基礎",
+      "question": "排煙設備と防火区画について適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 53,
+      "category": "基礎",
+      "question": "建築物の避難経路における二方向避難の意義はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 54,
+      "category": "基礎",
+      "question": "地震時に長周期地震動の影響を受けやすい建物はどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 55,
+      "category": "基礎",
+      "question": "家具の転倒防止策として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 56,
+      "category": "法令",
+      "question": "消防法に基づく防火管理者の選任に関して適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 57,
+      "category": "法令",
+      "question": "消防計画について適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 58,
+      "category": "法令",
+      "question": "防火管理者の選任届と消防計画の届出について適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 59,
+      "category": "法令",
+      "question": "消防用設備等の点検について適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 60,
+      "category": "法令",
+      "question": "特定防火対象物の消防用設備等点検結果の報告周期として原則正しいものはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 61,
+      "category": "法令",
+      "question": "非特定防火対象物の消防用設備等点検結果の報告周期として原則正しいものはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 62,
+      "category": "法令",
+      "question": "消防用設備等の機器点検の周期として原則正しいものはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 63,
+      "category": "法令",
+      "question": "消防用設備等の総合点検の周期として原則正しいものはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 64,
+      "category": "法令",
+      "question": "防火対象物点検報告制度について適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 65,
+      "category": "法令",
+      "question": "防火対象物の管理権原が分かれる場合の対応として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 66,
+      "category": "法令",
+      "question": "火災予防上必要な命令に関して適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 67,
+      "category": "法令",
+      "question": "消防法における危険物の指定数量について適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 68,
+      "category": "法令",
+      "question": "ガソリン（第1石油類・非水溶性）の指定数量として正しいものはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 69,
+      "category": "法令",
+      "question": "灯油（第2石油類・非水溶性）の指定数量として正しいものはどれか。",
+      "flags": [
+        "short-explanation",
+        "no-source"
+      ]
+    },
+    {
+      "id": 70,
+      "category": "法令",
+      "question": "指定数量未満の危険物の貯蔵・取扱いについて適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 71,
+      "category": "法令",
+      "question": "消防法第24条の火災発見者の通報について適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 72,
+      "category": "法令",
+      "question": "自衛消防組織の設置が必要となる防火対象物について適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 73,
+      "category": "法令",
+      "question": "防災管理者の選任に関して適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 74,
+      "category": "法令",
+      "question": "消防訓練の実施について適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 75,
+      "category": "法令",
+      "question": "防火管理業務の外部委託に関して適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 76,
+      "category": "実務",
+      "question": "火災受信機に複数の地区表示が出た場合の初動として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 77,
+      "category": "実務",
+      "question": "受信機の地区表示と警戒区域図が一致しない場合の対応はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 78,
+      "category": "実務",
+      "question": "発信機が押された後の対応として不適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 79,
+      "category": "実務",
+      "question": "消防隊到着前に防災センターで準備すべき情報はどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 80,
+      "category": "実務",
+      "question": "煙が階段室に流入しているときの避難誘導で適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 81,
+      "category": "実務",
+      "question": "防火シャッターが降下中で避難者が接近した際の対応はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 82,
+      "category": "実務",
+      "question": "排煙設備の操作で注意すべきことはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 83,
+      "category": "実務",
+      "question": "自衛消防隊の情報伝達で重要なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 84,
+      "category": "実務",
+      "question": "初期消火を実施する隊員の安全管理で優先するのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 85,
+      "category": "実務",
+      "question": "消火器の使用後の管理として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 86,
+      "category": "実務",
+      "question": "屋内消火栓のホースを延長する際に適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 87,
+      "category": "実務",
+      "question": "スプリンクラー設備の制御弁が閉止状態だった場合の対応はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 88,
+      "category": "実務",
+      "question": "泡消火設備の対象となる火災の特徴として適切なのはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 89,
+      "category": "実務",
+      "question": "不活性ガス消火設備が設置された区画への立入りで注意すべきことはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 90,
+      "category": "実務",
+      "question": "誘導灯の点検で不適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 91,
+      "category": "実務",
+      "question": "非常放送で避難指示を行う際に適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 92,
+      "category": "実務",
+      "question": "エレベーターの火災時管制運転について適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 93,
+      "category": "実務",
+      "question": "自動火災報知設備の感知器付近に商品を積み上げた場合の問題はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 94,
+      "category": "実務",
+      "question": "防火戸の閉鎖障害を発見した際の適切な対応はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 95,
+      "category": "実務",
+      "question": "消防隊への情報提供で優先度が高いものはどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "no-source"
+      ]
+    },
+    {
+      "id": 96,
+      "category": "実務",
+      "question": "地震後にガス臭を感じた場合の初動として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 97,
+      "category": "実務",
+      "question": "負傷者が複数発生したときの対応として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 98,
+      "category": "実務",
+      "question": "心肺蘇生で胸骨圧迫の中断を最小限にする理由はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 99,
+      "category": "実務",
+      "question": "AED解析中に周囲へ求める行動はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 100,
+      "category": "実務",
+      "question": "火災発生時の自衛消防隊長の指揮で適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 101,
+      "category": "実務",
+      "question": "災害時に自衛消防隊の活動範囲を決める際の基本はどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 102,
+      "category": "実務",
+      "question": "消防隊が現場に到着した後の自衛消防隊の対応として適切なのはどれか。",
+      "flags": [
+        "no-source"
+      ]
+    },
+    {
+      "id": 103,
+      "category": "基礎",
+      "question": "閉鎖した区画の火災で扉を開ける直前、上部の隙間から濃い煙が脈動している。最も警戒すべき現象はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 104,
+      "category": "基礎",
+      "question": "建物内の縦穴を通じた煙の上昇に関して、圧力差を生じさせる主な要因はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 105,
+      "category": "基礎",
+      "question": "危険物の液面火災で泡消火剤を使用する際の目的として最も適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 106,
+      "category": "基礎",
+      "question": "火災室から廊下へ煙が流出している。防火戸の閉鎖が遅れると危険が増す理由として適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 107,
+      "category": "基礎",
+      "question": "地震後に天井材が脱落し、廊下に破片が散乱している。避難経路の評価で優先すべき点はどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 108,
+      "category": "基礎",
+      "question": "防火区画を貫通するダクトに防火ダンパーが設けられている。維持管理上の重要事項はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 109,
+      "category": "基礎",
+      "question": "避難口の扉が避難方向に開かない構造の場合、最も直接的に懸念されることはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 110,
+      "category": "基礎",
+      "question": "火災時の避難計画で『水平避難』が特に意味を持つ状況はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 111,
+      "category": "法令",
+      "question": "消防法令上の防火管理者の責務を検討するとき、最初に確認すべき建物側の情報はどれか。",
+      "flags": [
+        "implausible-or-absolute-distractor",
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 112,
+      "category": "法令",
+      "question": "複数テナントの入る建物で管理権原が分かれている。統括防火管理の必要性を判断する際に重要なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 113,
+      "category": "法令",
+      "question": "消防用設備等の点検と報告の区別として正しいものはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 114,
+      "category": "法令",
+      "question": "消防計画を変更すべき可能性が高い状況はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 115,
+      "category": "法令",
+      "question": "消防法第24条に関して、初期消火を実施した者の通報義務の理解として適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 116,
+      "category": "実務",
+      "question": "自動火災報知設備の発報後、現場確認担当と防災センター担当が連絡不能になった。優先すべき改善はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 117,
+      "category": "実務",
+      "question": "防災センターの受信機に発報表示があるが、現場担当から『煙は見えない』との報告があった。適切な判断はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 118,
+      "category": "実務",
+      "question": "屋内消火栓を使う際、ホースが防火戸の閉鎖を妨げている。適切な対応はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 119,
+      "category": "実務",
+      "question": "避難誘導中に避難者が火災階へ戻ろうとした。最も適切な対応はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 120,
+      "category": "実務",
+      "question": "防火シャッター降下位置に台車が置かれている。火災発生前に行うべき措置はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 121,
+      "category": "実務",
+      "question": "スプリンクラー設備の流水検知装置が作動したが、現場で散水の有無を確認できない。適切な対応はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 122,
+      "category": "実務",
+      "question": "不活性ガス消火設備の放出警報が作動した区画での最優先事項はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 123,
+      "category": "実務",
+      "question": "停電で非常用照明が点灯したが、一部通路が暗い。避難誘導担当が行うべきことはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 124,
+      "category": "実務",
+      "question": "消防隊への引継ぎ時に、火災発生場所は確定していないが受信機の表示地区は判明している。適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 125,
+      "category": "実務",
+      "question": "地震で複数の負傷者が出たが、天井材の落下が続いている。救護活動の判断で最も適切なのはどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    },
+    {
+      "id": 126,
+      "category": "実務",
+      "question": "館内放送で避難経路を案内した直後にその経路へ煙が流入した。適切な対応はどれか。",
+      "flags": [
+        "short-explanation"
+      ]
+    }
+  ],
+  "note": "Heuristic review only; requires manual checking of all questions, including unflagged ones."
+}
