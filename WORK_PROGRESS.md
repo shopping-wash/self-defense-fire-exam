@@ -55,4 +55,4 @@ id固有ID / c試験区分（基礎・法令・実務）/ unit6単元 / concept�
 GitHub最新9db3e8bから再開。220候補・最終合格0を確認。F001の最新修正を維持。添付再送PDFのSHA256は前回と同一。PDF2〜20頁の実見分析を保存、残り18写真分析中。ソースはJSON最新を優先する。
 
 ## 2026-11-14 通常チャットでの引継ぎ
-既存 `staging/building-author.py` に記載済みのオリジナル26問を `staging/building.json` に変換して保存。候補総数は246問（fire60 / building26 / law40 / activity50 / equipment45 / facilities25）。構造検査で26問すべて4択・各肢解説あり・正答インデックス有効・正答説明の形式一致を確認。これらも法令・難易度の最終審査前で、完成済み問題は0問。残り54問（building34、law20）。本番は未反映。
+既存 `staging/building-author.py` に記載済みのオリジナル26問を `staging/building.json` に変換して保存。候補総数は246問（fire60 / building26 / law40 / activity50 / equipment45 / facilities25）。構造検査で26問すべて4択・各肢解説あり・正答インデックス有効を確認。解説の冒頭表現による機械判定で要確認8問（）があり、設問の正誤指定と照合する必要あり。これらも法令・難易度の最終審査前で、完成済み問題は0問。残り54問（building34、law20）。本番は未反映。
