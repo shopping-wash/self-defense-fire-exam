@@ -33,7 +33,7 @@ function makeMock(bank, random = Math.random) {
   return result;
 }
 function validateBank(bank) {
-  if (!Array.isArray(bank) || bank.length !== 300) throw new Error('300問の問題データを読み込めませんでした。');
+  if (!Array.isArray(bank) || bank.length !== 246) throw new Error('246問の問題データを読み込めませんでした。');
   const ids = new Set(), texts = new Set();
   for (const q of bank) {
     if (!q || typeof q.id !== 'string' || ids.has(q.id) || typeof q.q !== 'string' || texts.has(q.q)
