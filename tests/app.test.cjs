@@ -64,14 +64,17 @@ h.call('choose(0)');const firstFeedback=h.node('result').innerHTML;assert(firstF
 if(bank[0].optionExplanations)assert(firstFeedback.includes('選択肢ごとの解説'));
 if(bank[0].difficulty)assert(firstFeedback.includes('難易度（編集上の目安）'));
 h.call('choose(1)');assert.equal(h.node('result').innerHTML,firstFeedback,'Double clicks cannot replace grade');
+assert.equal(Object.values(JSON.parse(h.writes[core.KEYS.history]).questions).reduce((n,x)=>n+x.attempts,0),1,'Double click counts once');
 h.call('next()');assert(h.node('app').innerHTML.includes('第2問'));
 h.call('hardMock()');let saved=JSON.parse(h.writes[core.KEYS.mock]);assert.equal(saved.ids.length,25);assert.equal(saved.deadline,4501000);
 h.call('choose(0)');assert.equal(JSON.parse(h.writes[core.KEYS.mock]).answers[0],0);
 h.call('choose(2)');assert.equal(JSON.parse(h.writes[core.KEYS.mock]).answers[0],2,'Mock choices can change before submission');
 h.call('jump(24)');assert.equal(JSON.parse(h.writes[core.KEYS.mock]).index,24);
 h.call('leave()');h.setNow(5000000);h.call('resumeMock()');assert(h.node('app').innerHTML.includes('自動提出'));assert(!h.writes[core.KEYS.mock]);
+assert.equal(Object.values(JSON.parse(h.writes[core.KEYS.history]).questions).reduce((n,x)=>n+x.attempts,0),26,'Practice plus submitted mock counted');
 assert.equal((h.node('app').innerHTML.match(/class="result-question"/g)||[]).length,25);
+h.call('showHistory()');assert(h.node('app').innerHTML.includes('累計正答率'));assert(h.node('app').innerHTML.includes('延べ 26回答'));
 h.call('startPractical()');assert(h.node('app').innerHTML.includes('textarea'));h.call('reveal()');assert(h.node('result').innerHTML.includes('模範解答例'));h.call('mark(false)');assert.equal(JSON.parse(h.writes[core.KEYS.practical]).length,1);
 h=browserHarness({blocked:true});h.call('hardMock()');h.call('choose(1)');h.call('leave()');assert(h.node('app').innerHTML.includes('中断した模擬試験'));h.call('resumeMock()');assert(h.node('app').innerHTML.includes('第1問'));h.call('submitMock()');assert(h.node('app').innerHTML.includes('模擬試験の結果'));h.call("menu('w')");assert(!h.node('app').innerHTML.includes('中断した模擬試験'));
 h=browserHarness({stored:{[core.KEYS.wrong]:'{broken JSON',[core.KEYS.mock]:'null'}});h.call('retry()');assert(h.node('app').innerHTML.includes('学習する試験'));
-console.log(JSON.stringify({mode:fixtureMode?'development fixtures only':'production bank',questions:bank.length,practical:core.P.length,answerChecks:1200,randomMocks:1000,questionsObserved:observed.size,checks:['six units','unique mock IDs','10/5/10 allocation','75 minute deadline','resume expired mock','source rendering','double-grade guard','practical learning/review','storage blocked','corrupt storage']},null,2));
+console.log(JSON.stringify({mode:fixtureMode?'development fixtures only':'production bank',questions:bank.length,practical:core.P.length,answerChecks:1200,randomMocks:1000,questionsObserved:observed.size,checks:['six units','unique mock IDs','10/5/10 allocation','75 minute deadline','resume expired mock','source rendering','double-grade guard','practical learning/review','storage blocked','corrupt storage','history cumulative totals','history double-count guard']},null,2));

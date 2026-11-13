@@ -13,7 +13,7 @@ const UNITS = [
   ['防火及び避難施設等の維持管理・取扱要領', 'facilities']
 ];
 const MOCK_MS = 75 * 60 * 1000;
-const KEYS = {wrong:'fireExamWrong-v2', practical:'fireExamPracticalWrong-v2', mock:'fireExamMock-v2'};
+const KEYS = {wrong:'fireExamWrong-v2', practical:'fireExamPracticalWrong-v2', mock:'fireExamMock-v2', history:'fireExamHistory-v1'};
 function shuffle(values, random = Math.random) {
   const copy = [...values];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -111,6 +111,40 @@ if (typeof document !== 'undefined') {
     const wrong = new Set(wrongIds());
     if(correct)wrong.delete(q.id);else wrong.add(q.id);
     write(KEYS.wrong,[...wrong]);
+    const history = getHistory();
+    const previous = history.questions[q.id] || {attempts:0,correct:0};
+    history.questions[q.id] = {attempts:previous.attempts+1,correct:previous.correct+Number(correct),lastAt:Date.now(),lastCorrect:correct};
+    write(KEYS.history,history);
+  }
+  function getHistory() {
+    const raw=read(KEYS.history,null), questions={};
+    if(raw && raw.version===1 && raw.questions && typeof raw.questions==='object') {
+      for(const q of bank) {
+        const x=raw.questions[q.id];
+        if(x && Number.isSafeInteger(x.attempts) && x.attempts>0 && Number.isSafeInteger(x.correct)
+          && x.correct>=0 && x.correct<=x.attempts && Number.isFinite(x.lastAt)) questions[q.id]=x;
+      }
+    }
+    return {version:1,questions};
+  }
+  function historySummary() {
+    const entries=Object.values(getHistory().questions);
+    const attempts=entries.reduce((n,x)=>n+x.attempts,0), correct=entries.reduce((n,x)=>n+x.correct,0);
+    return '<p>学習済み <b>'+entries.length+' / '+bank.length+'問</b> ｜ 累計正答率 <b>'+(attempts?Math.round(correct/attempts*100)+'%':'未解答')+'</b></p><p class="muted">延べ '+attempts+'回答・'+correct+'正解。模擬試験は提出時に記録します。</p>';
+  }
+  function showHistory() {
+    clearTimer();session=null;
+    const history=getHistory().questions;
+    const rows=UNITS.map(([name,id])=>{
+      const questions=bank.filter(q=>q.unit===id), values=questions.map(q=>history[q.id]).filter(Boolean);
+      const attempts=values.reduce((n,x)=>n+x.attempts,0), correct=values.reduce((n,x)=>n+x.correct,0);
+      return '<section class="result-question"><h3>'+esc(name)+'</h3><p>学習済み '+values.length+' / '+questions.length+'問 ｜ '+correct+' / '+attempts+'回答正解（'+(attempts?Math.round(correct/attempts*100)+'%':'未解答')+'）</p></section>';
+    }).join('');
+    const recent=Object.entries(history).sort((a,b)=>b[1].lastAt-a[1].lastAt).slice(0,30).map(([id,x])=>{
+      const q=bank.find(q=>q.id===id);
+      return '<li><b>'+esc(id)+'</b> '+(x.lastCorrect?'正解':'不正解')+' ｜ '+esc(new Date(x.lastAt).toLocaleString('ja-JP'))+'<br>'+esc(q.q)+'</li>';
+    }).join('');
+    render('<div class="card">'+button('← 学習メニュー',"menu('w')")+'<h2>学習履歴・正答率</h2>'+historySummary()+rows+'<h3>最近学習した問題（最大30件）</h3><p class="muted">各問題の直近の結果を表示します。同じ問題を解き直した回数も累計に含みます。</p><ol class="answer-list">'+recent+'</ol>'+button('間違えた問題を復習','retry()','primary')+'</div>');
   }
   function practicalWrong() {return normalizedIds(read(KEYS.practical,[]),P.map((_,i)=>'P'+i));}
   function explanation(q) {
@@ -134,7 +168,7 @@ if (typeof document !== 'undefined') {
     clearTimer(); session=null;
     const saved=savedMock();
     render('<div class="card"><h2>学習する試験を選択</h2><p>筆記 <b>'+bank.length+'問</b>・6単元／集合実技 <b>'+P.length+'問</b></p>'+
-      button('📘 筆記試験　4択・解説付き',"menu('w')")+button('🧯 集合実技　記述式・模範解答付き',"menu('p')")+
+      historySummary()+button('学習履歴・正答率','showHistory()')+button('📘 筆記試験　4択・解説付き',"menu('w')")+button('🧯 集合実技　記述式・模範解答付き',"menu('p')")+
       (saved?button('中断した模擬試験を再開','resumeMock()','primary')+'<p class="muted">中断中も75分の制限時間は進みます。</p>':'')+
       '<p class="muted">各問題の解説から根拠となる公式資料を確認できます。</p></div>');
   }
@@ -143,7 +177,7 @@ if (typeof document !== 'undefined') {
     const saved=savedMock();
     render('<div class="card">'+button('← トップへ','home()')+'<h2>'+(mode==='w'?'筆記試験｜単元別学習':'集合実技')+'</h2>'+
       (mode==='w'?UNITS.map(([name,id])=>button(name+'（'+bank.filter(q=>q.unit===id).length+'問）',"startUnit('"+id+"')")).join('')+
-      button('全単元 '+bank.length+'問','hardStart()')+button('25問模擬試験・75分','mockIntro()','primary')+
+      button('学習履歴・正答率','showHistory()')+button('全単元 '+bank.length+'問','hardStart()')+button('25問模擬試験・75分','mockIntro()','primary')+
       (saved?button('中断した模擬試験を再開','resumeMock()'):'')+button('間違えた問題を復習（'+wrongIds().length+'問）','retry()'):
       button('記述問題 '+P.length+'問','startPractical()','primary')+button('実技の復習（'+practicalWrong().length+'問）','retryPractical()'))+'</div>');
   }
@@ -214,7 +248,7 @@ if (typeof document !== 'undefined') {
     const rows=[['基礎知識','基礎'],['消防関係法令','法令'],['自衛消防業務','実務']].map(([label,c])=>{const pairs=session.items.map((q,i)=>[q,session.answers[i]]).filter(([q])=>q.c===c);return '<li>'+label+'：'+pairs.filter(([q,a])=>a===q.k).length+' / '+pairs.length+'</li>';}).join('');
     render('<div class="card"><h2>模擬試験の結果</h2>'+(expired?'<p>75分が経過したため、自動提出しました。</p>':'')+'<h1>'+total+' / 25</h1><ul>'+rows+'</ul><p class="muted">この結果は学習用の得点です。公式の合否判定ではありません。</p>'+button('学習メニューへ',"menu('w')",'primary')+'<h2>解答と解説</h2>'+session.items.map((q,i)=>{const a=session.answers[i],ok=a===q.k;return '<section class="result-question"><span class="badge">問'+(i+1)+' ｜ '+esc(q.id)+'</span><h3>'+esc(q.q)+'</h3><p class="'+(ok?'correct':'incorrect')+'">'+(a===null?'未回答':'あなたの解答：'+'ABCD'[a])+' ／ 正解：'+'ABCD'[q.k]+'</p><ol type="A" class="answer-list">'+q.a.map((text,j)=>'<li class="'+(j===q.k?'correct':'')+'">'+esc(text)+'</li>').join('')+'</ol>'+explanation(q)+'</section>';}).join('')+button('学習メニューへ',"menu('w')",'primary')+'</div>');
   }
-  Object.assign(window,{home,menu,startUnit,hardStart,retry,startPractical,retryPractical,mockIntro,hardMock,resumeMock,leave,choose,next,reveal,mark,jump,move,submitMock});
+  Object.assign(window,{home,menu,showHistory,startUnit,hardStart,retry,startPractical,retryPractical,mockIntro,hardMock,resumeMock,leave,choose,next,reveal,mark,jump,move,submitMock});
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick();});
   window.addEventListener('pageshow',tick);
   window.addEventListener('pagehide',saveMock);
