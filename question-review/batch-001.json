@@ -1,0 +1,206 @@
+{
+  "status": "staging-not-published",
+  "note": "These are individually authored candidate questions, not yet certified as final. Do not merge until full 300-question QA passes.",
+  "questions": [
+    {
+      "id": "review-20261113-001",
+      "category": "基礎",
+      "question": "燃焼の三要素と消火の主な効果の組合せとして、誤っているものはどれか。",
+      "choices": [
+        "可燃物の除去―除去消火",
+        "水による熱の奪取―冷却消火",
+        "二酸化炭素による酸素濃度の低下―窒息消火",
+        "燃焼の連鎖反応の抑制―冷却消火"
+      ],
+      "correctIndex": 3,
+      "choiceExplanations": [
+        "正しい。可燃物を取り除き燃焼の継続を妨げる。",
+        "正しい。水の吸熱によって温度を低下させる。",
+        "正しい。酸素供給を妨げる窒息効果が中心となる。",
+        "誤り。連鎖反応を断つ作用は抑制消火であり、冷却消火とは区別する。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-002",
+      "category": "基礎",
+      "question": "静電気による火災の防止に関する記述のうち、誤っているものはどれか。",
+      "choices": [
+        "可燃性液体の移送時は、流動による帯電にも注意する。",
+        "導電性の設備を適切に接地することは、帯電の低減に役立つ。",
+        "一般に乾燥した環境では、帯電した電荷が逃げにくい。",
+        "接地を行えば、可燃性蒸気の濃度にかかわらず着火危険は完全になくなる。"
+      ],
+      "correctIndex": 3,
+      "choiceExplanations": [
+        "正しい。液体の流動によって静電気が発生することがある。",
+        "正しい。適切な接地は電荷の蓄積を抑える対策の一つである。",
+        "正しい。乾燥環境は静電気が蓄積しやすい。",
+        "誤り。接地は一対策にすぎず、可燃性蒸気の管理や着火源対策も必要となる。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-003",
+      "category": "基礎",
+      "question": "火災時の煙の性質について、妥当でないものはどれか。",
+      "choices": [
+        "煙には一酸化炭素などの有害成分が含まれる場合がある。",
+        "高温の煙は浮力によって上昇し、天井付近に広がることがある。",
+        "時間経過とともに煙層が降下し、避難可能な空間が狭まることがある。",
+        "煙は常に水平方向の方が垂直方向より速く移動するため、階段室への流入は考慮しなくてよい。"
+      ],
+      "correctIndex": 3,
+      "choiceExplanations": [
+        "正しい。火災煙は有害成分を含み得る。",
+        "正しい。高温煙は上昇して天井面に沿って広がる。",
+        "正しい。煙層の降下は避難に影響する。",
+        "誤り。煙は竪穴等を通じて上方へ急速に拡大する場合があり、階段室への流入を防ぐ必要がある。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-004",
+      "category": "基礎",
+      "question": "防火材料の区分を、不燃性能が高いものから順に並べたものはどれか。",
+      "choices": [
+        "準不燃材料―不燃材料―難燃材料",
+        "不燃材料―難燃材料―準不燃材料",
+        "不燃材料―準不燃材料―難燃材料",
+        "難燃材料―準不燃材料―不燃材料"
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        "誤り。不燃材料が準不燃材料より上位である。",
+        "誤り。準不燃材料は難燃材料より上位である。",
+        "正しい。不燃、準不燃、難燃の順である。",
+        "誤り。順序が逆である。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-005",
+      "category": "法令",
+      "question": "消防法第8条に基づく防火管理について、誤っているものはどれか。",
+      "choices": [
+        "管理について権原を有する者は、所定の資格を有する者から防火管理者を選任する。",
+        "防火管理者の選任又は解任をした場合、管理権原者は所定の届出を行う。",
+        "防火管理者は消防計画に基づく消火・通報・避難訓練等の業務を行う。",
+        "消防計画を届け出た時点で、管理権原者は防火管理業務について一切の責任を負わなくなる。"
+      ],
+      "correctIndex": 3,
+      "choiceExplanations": [
+        "正しい。選任義務は管理権原者にある。",
+        "正しい。選任・解任の届出義務がある。",
+        "正しい。消防計画の作成や訓練等は防火管理者の業務である。",
+        "誤り。防火管理者を選任しても管理権原者の責任は消滅しない。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-006",
+      "category": "法令",
+      "question": "消防法令上の消防用設備等の分類について、正しい組合せはどれか。",
+      "choices": [
+        "自動火災報知設備―避難設備",
+        "誘導灯―警報設備",
+        "屋内消火栓設備―消火設備",
+        "連結送水管―消防用水"
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        "誤り。自動火災報知設備は警報設備に分類される。",
+        "誤り。誘導灯は避難設備に分類される。",
+        "正しい。屋内消火栓設備は消火設備である。",
+        "誤り。連結送水管は消火活動上必要な施設である。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-007",
+      "category": "法令",
+      "question": "消防法第24条の火災通報について、正しいものはどれか。",
+      "choices": [
+        "火災を発見した者は、遅滞なく消防署又は市町村長の指定した場所に通報しなければならない。",
+        "火災を発見した者は、燃焼物と延焼範囲が確定するまで通報を待つ。",
+        "火災を発見した者の通報義務は、防火管理者が現場にいる場合には常に免除される。",
+        "消火器で初期消火に成功した場合、火災の通報義務は必ず消滅する。"
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        "正しい。消防法第24条の通報義務に対応する。",
+        "誤り。詳細確定を待たず遅滞なく通報する。",
+        "誤り。防火管理者の在否を理由に火災発見者の通報義務が一律に消えるわけではない。",
+        "誤り。消火の成否を理由に一律に通報不要とはならない。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-008",
+      "category": "実務",
+      "question": "火災時の安全防護措置について、妥当でないものはどれか。",
+      "choices": [
+        "防火戸の閉鎖に際しては、避難誘導員との連携に配慮する。",
+        "空調設備の運転が煙の拡散を助長するおそれがある場合は、適切な停止措置をとる。",
+        "自動閉鎖式の防火戸は、煙感知器と連動していれば作動状況を確認する必要はない。",
+        "防火シャッターの降下範囲には、閉鎖を妨げる物を置かない。"
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        "正しい。避難者の安全と閉鎖措置の両立が必要である。",
+        "正しい。空調は煙拡散に影響する場合がある。",
+        "誤り。自動連動でも作動状況の確認と必要な対応は重要である。",
+        "正しい。閉鎖障害を防ぐ必要がある。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-009",
+      "category": "実務",
+      "question": "消防隊が到着した際の防災センター要員の対応として、誤っているものはどれか。",
+      "choices": [
+        "受信機の表示や現場からの報告を整理し、出火場所の情報を提供する。",
+        "消防用設備等の操作履歴と作動状況を把握して伝える。",
+        "建物の関係図面や避難状況を、消防隊に提供できるよう準備する。",
+        "消防隊が防災センターに指揮本部を設置した場合、防災センター要員は情報提供をやめ、直ちに全員退室する。"
+      ],
+      "correctIndex": 3,
+      "choiceExplanations": [
+        "正しい。火点と状況の把握は重要である。",
+        "正しい。設備の作動状況は消防活動に必要となる。",
+        "正しい。図面と避難情報は重要な引継ぎ資料である。",
+        "誤り。消防隊の指揮活動に必要な情報提供・連携を継続する。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    },
+    {
+      "id": "review-20261113-010",
+      "category": "実務",
+      "question": "スプリンクラー設備の維持管理に関する記述のうち、誤っているものはどれか。",
+      "choices": [
+        "スプリンクラーヘッドの散水を妨げる物品は取り除く。",
+        "制御弁の開閉状態は、設備の正常な機能に関係するため確認する。",
+        "スプリンクラー制御弁は、通常開放が必要な設備でも誤放水防止のため常時閉鎖しておく。",
+        "設備の電源表示灯などに異常がある場合は、点検・是正につなげる。"
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        "正しい。散水障害を防止する。",
+        "正しい。制御弁の状態は設備の機能に直結する。",
+        "誤り。通常開放が必要な制御弁を常時閉鎖すると、設備が正常に作動しないおそれがある。",
+        "正しい。異常を放置せず確認・是正する。"
+      ],
+      "source": "https://www.tfd.metro.tokyo.lg.jp/content/000021182.pdf",
+      "reviewStatus": "draft-needs-independent-legal-and-editorial-review"
+    }
+  ]
+}
