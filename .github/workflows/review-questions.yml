@@ -1,0 +1,43 @@
+name: Fire exam question review (proposals only)
+on:
+  workflow_dispatch:
+    inputs:
+      offset:
+        description: "Start index (0-245)"
+        required: true
+        default: "0"
+      limit:
+        description: "Number of questions (1-20)"
+        required: true
+        default: "5"
+      dry_run:
+        description: "Validate without spending API credits"
+        type: boolean
+        required: true
+        default: true
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate and propose revisions
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python scripts/review_questions.py --offset "${{ inputs.offset }}" --limit "${{ inputs.limit }}" --dry-run
+          else
+            python scripts/review_questions.py --offset "${{ inputs.offset }}" --limit "${{ inputs.limit }}"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: review-proposals-${{ inputs.offset }}
+          path: review-output/
+          if-no-files-found: warn
