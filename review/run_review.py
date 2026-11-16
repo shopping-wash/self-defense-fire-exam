@@ -3,7 +3,7 @@ p=argparse.ArgumentParser()
 p.add_argument("--start",type=int,default=0);p.add_argument("--count",type=int,default=20)
 a=p.parse_args()
 raw=pathlib.Path("questions.js").read_text()
-questions=json.loads(re.search(r"const\\s+HARD\\s*=\\s*(\\[[\\s\\S]*\\])\\s*;",raw).group(1))
+questions=json.loads(re.search(r"const\s+HARD\s*=\s*(\[[\s\S]*\])\s*;",raw).group(1))
 assert len(questions)==246
 evidence=json.loads(pathlib.Path("review/evidence.json").read_text())
 if not evidence: raise SystemExit("STOP: verified source excerpts missing; add review/evidence.json first")
