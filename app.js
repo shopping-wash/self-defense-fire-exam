@@ -25,26 +25,26 @@ function shuffle(values, random = Math.random) {
 function makeMock(bank, random = Math.random) {
   const result = [];
   for (const [category, count] of [['基礎',10],['法令',5],['実務',10]]) {
-    const pool = bank.filter(q => q.c === category);
-    if (pool.length < count) throw new Error('模擬試験の問題数が不足しています。');
+    const pool = bank.filter(q => q.c === category || q.c === '提供問題集');
+    if (pool.length < count) throw new Error('模擬試験に必要な問題数が不足しています。');
     result.push(...shuffle(pool, random).slice(0, count));
   }
   if (new Set(result.map(q => q.id)).size !== 25) throw new Error('問題IDに重複があります。');
   return result;
 }
 function validateBank(bank) {
-  if (!Array.isArray(bank) || bank.length !== 246) throw new Error('246問の問題データを読み込めませんでした。');
+  if (!Array.isArray(bank) || bank.length < 1) throw new Error('問題データがありません。');
   const ids = new Set(), texts = new Set();
   for (const q of bank) {
     if (!q || typeof q.id !== 'string' || ids.has(q.id) || typeof q.q !== 'string' || texts.has(q.q)
       || !Array.isArray(q.a) || q.a.length !== 4 || new Set(q.a).size !== 4
       || q.a.some(a => typeof a !== 'string' || !a.trim()) || !Number.isInteger(q.k) || q.k < 0 || q.k > 3
-      || !['基礎','法令','実務'].includes(q.c) || !UNITS.some(u => u[1] === q.unit)
+      || !['基礎','法令','実務','提供問題集'].includes(q.c) || !UNITS.some(u => u[1] === q.unit)
       || !Array.isArray(q.optionExplanations) || q.optionExplanations.length !== 4
       || q.optionExplanations.some(e => typeof e !== 'string' || !e.trim())
       || typeof q.concept !== 'string' || !q.concept.trim() || typeof q.difficulty !== 'string' || !q.difficulty.trim()
       || typeof q.e !== 'string' || !q.e || typeof q.reference !== 'string' || !q.reference
-      || typeof q.source !== 'string' || !/^https:\/\//.test(q.source)) {
+      || typeof q.source !== 'string' || !q.source.trim()) {
       throw new Error('問題データの形式が正しくありません。');
     }
     ids.add(q.id); texts.add(q.q);
